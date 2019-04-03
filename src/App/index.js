@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import styled, { css } from "styled-components";
-import Welcome from "./WelcomeMessage";
+import Settings from "../Settings";
 import AppLayout from "./AppLayout";
 import AppBar from "./AppBar";
 import { AppProvider } from "./AppProvider";
@@ -12,7 +12,7 @@ class App extends Component {
       <AppLayout>
         <AppProvider>
           <AppBar />
-          <Welcome />
+          <Settings />
         </AppProvider>
       </AppLayout>
     );
