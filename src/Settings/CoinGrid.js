@@ -34,7 +34,7 @@ export default function(topSection) {
             topSection,
             filteredCoins
           ).map(coinKey => (
-            <CoinTile topSection={topSection} coinKey={coinKey} />
+            <CoinTile key={coinKey} topSection={topSection} coinKey={coinKey} />
           ))}
         </CoinGridStlyed>
       )}

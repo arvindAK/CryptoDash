@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { DeletableTile } from "../Shared/Tile";
 
-export const CoinHeaderGridSystem = styled.div`
+export const CoinHeaderGridStyled = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 `;
@@ -22,13 +22,13 @@ const DeleteIcon = styled.div`
 
 export default function({ name, symbol, topSection }) {
   return (
-    <CoinHeaderGridSystem>
+    <CoinHeaderGridStyled>
       <div>{name}</div>
       {topSection ? (
         <DeleteIcon>X</DeleteIcon>
       ) : (
         <CoinSymbol>{symbol}</CoinSymbol>
       )}
-    </CoinHeaderGridSystem>
+    </CoinHeaderGridStyled>
   );
 }
