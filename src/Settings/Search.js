@@ -20,7 +20,6 @@ const SearchInput = styled.input`
 `;
 
 const handleFilter = _.debounce((inputValue, setFilterCoins, coinList) => {
-  console.log(coinList);
   // Get all the coin symbols
   let coinSymbols = Object.keys(coinList);
   // Get all the coin names, map symbol to name
