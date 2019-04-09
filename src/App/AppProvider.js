@@ -17,6 +17,7 @@ export class AppProvider extends React.Component {
       addCoin: this.addCoin,
       removeCoin: this.removeCoin,
       isInFavorites: this.isInFavorites,
+      setFilterCoins: this.setFilterCoins,
       confirmFavorites: this.confirmFavorites
     };
   }
@@ -28,6 +29,7 @@ export class AppProvider extends React.Component {
   fetchCoins = async () => {
     let coinList = (await cc.coinList()).Data;
     this.setState({ coinList });
+    console.log(coinList);
   };
 
   savedSettings() {
@@ -70,6 +72,8 @@ export class AppProvider extends React.Component {
       })
     );
   };
+
+  setFilterCoins = filteredCoins => this.setState({ filteredCoins });
 
   render() {
     return (
