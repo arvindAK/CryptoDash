@@ -6,7 +6,6 @@ const cc = require("cryptocompare");
 export const AppContext = React.createContext();
 
 const MAX_FAVORITES = 10;
-const TIME_UNITS = 10;
 
 export class AppProvider extends React.Component {
   constructor(props) {
@@ -15,6 +14,7 @@ export class AppProvider extends React.Component {
       page: "dashboard",
       favorites: ["BTC", "ETH", "XMR", "DOGE"],
       timeInterval: "months",
+      dataPoints: 10,
       ...this.savedSettings(),
       setPage: this.setPage,
       addCoin: this.addCoin,
@@ -23,7 +23,8 @@ export class AppProvider extends React.Component {
       setFilterCoins: this.setFilterCoins,
       setCurrentFavorite: this.setCurrentFavorite,
       confirmFavorites: this.confirmFavorites,
-      changeChartSelect: this.changeChartSelect
+      changeChartSelect: this.changeChartSelect,
+      changeChartSelectDataPoints: this.changeChartSelectDataPoints
     };
   }
 
@@ -52,7 +53,9 @@ export class AppProvider extends React.Component {
         name: this.state.currentFavorite,
         data: results.map((ticker, index) => [
           moment()
-            .subtract({ [this.state.timeInterval]: TIME_UNITS - index })
+            .subtract({
+              [this.state.timeInterval]: this.state.dataPoints - index
+            })
             .valueOf(),
           ticker.GBP
         ])
@@ -63,7 +66,7 @@ export class AppProvider extends React.Component {
 
   historical = () => {
     let promises = [];
-    for (let units = TIME_UNITS; units > 0; units--) {
+    for (let units = this.state.dataPoints; units > 0; units--) {
       promises.push(
         cc.priceHistorical(
           this.state.currentFavorite,
@@ -162,9 +165,15 @@ export class AppProvider extends React.Component {
   setFilterCoins = filteredCoins => this.setState({ filteredCoins });
 
   changeChartSelect = value => {
-    console.log(value);
     this.setState(
       { timeInterval: value, historical: null },
+      this.fetchHistorical
+    );
+  };
+
+  changeChartSelectDataPoints = value => {
+    this.setState(
+      { dataPoints: value, historical: null },
       this.fetchHistorical
     );
   };

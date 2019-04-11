@@ -1,4 +1,3 @@
-import HighCharts from "./HighchartsConfig";
 import React from "react";
 import { Tile } from "../Shared/Tile";
 import { AppContext } from "../App/AppProvider";
@@ -11,7 +10,12 @@ ReactHighcharts.Highcharts.setOptions(HighchartsTheme);
 export default function() {
   return (
     <AppContext.Consumer>
-      {({ historical, changeChartSelect }) => (
+      {({
+        historical,
+        changeChartSelect,
+        timeInterval,
+        changeChartSelectDataPoints
+      }) => (
         <Tile>
           <ChartSelect
             defaultValue={"months"}
@@ -22,8 +26,21 @@ export default function() {
             <option value={"months"}>Months</option>
             <option value={"years"}>Years</option>
           </ChartSelect>
+          <ChartSelect
+            defaultValue={"10"}
+            onChange={e => changeChartSelectDataPoints(e.target.value)}
+            name="dataPoints"
+          >
+            <option value={10}>10</option>
+            <option value={15}>15</option>
+            <option value={20}>20</option>
+            <option value={25}>25</option>
+          </ChartSelect>
+
           {historical ? (
-            <ReactHighcharts config={HighChartsConfig(historical)} />
+            <ReactHighcharts
+              config={HighChartsConfig(historical, timeInterval)}
+            />
           ) : (
             <div>Loading Historical Data...</div>
           )}

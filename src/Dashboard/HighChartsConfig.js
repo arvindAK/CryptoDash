@@ -1,4 +1,4 @@
-export default function(historical) {
+export default function(historical, timeInterval) {
   return {
     title: {
       text: ""
@@ -9,13 +9,15 @@ export default function(historical) {
         text: "Price"
       }
     },
-    xAxis: { type: "datetime" },
-    legend: {
-      layout: "vertical",
-      align: "right",
-      verticalAlign: "middle"
+    xAxis: {
+      type: "datetime",
+      title: {
+        text: timeInterval.charAt(0).toUpperCase() + timeInterval.slice(1)
+      }
     },
-
+    legend: {
+      enabled: false
+    },
     plotOptions: {
       series: {
         label: {
@@ -31,13 +33,7 @@ export default function(historical) {
           condition: {
             maxWidth: 500
           },
-          chartOptions: {
-            legend: {
-              layout: "horizontal",
-              align: "center",
-              verticalAlign: "bottom"
-            }
-          }
+          chartOptions: {}
         }
       ]
     }

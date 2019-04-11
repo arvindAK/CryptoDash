@@ -13,10 +13,11 @@ export const CoinSymbol = styled.div`
 
 const DeleteIcon = styled.div`
   justify-self: right;
-  display: none;
+  opacity: 0;
   ${DeletableTile}:hover & {
-    display: block;
+    opacity: 1;
     color: red;
+    transition: 0.5s;
   }
 `;
 

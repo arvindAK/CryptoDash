@@ -17,7 +17,8 @@ const ControlButtonElem = styled.div`
   ${props =>
     props.active &&
     css`
-      text-shadow: 0px 0px 30px #000;
+      color: #d3d0cb;
+      pointer-events: none;
     `}
   ${props =>
     props.hidden &&
@@ -49,7 +50,7 @@ function ControlButton({ name, active }) {
 export default function() {
   return (
     <Bar>
-      <Logo>CrytoDash</Logo>
+      <Logo>CryptoDash</Logo>
       <div />
       <ControlButton active name="dashboard" />
       <ControlButton name="settings" />

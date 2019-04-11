@@ -1,23 +1,13 @@
+const textColor = "#0E1428";
+const gridLineColor = "#D3D0CB";
 export default {
-  colors: [
-    "#DDDF0D",
-    "#55BF3B",
-    "#DF5353",
-    "#7798BF",
-    "#aaeeee",
-    "#ff0066",
-    "#eeaaee",
-    "#55BF3B",
-    "#DF5353",
-    "#7798BF",
-    "#aaeeee"
-  ],
+  colors: ["#393E41"],
   chart: {
-    backgroundColor: "#061a44",
+    backgroundColor: "#17a2ff",
     borderColor: "#000000",
     borderWidth: 0,
     className: "dark-container",
-    plotBackgroundColor: "#061a44",
+    plotBackgroundColor: "#17a2ff",
     plotBorderWidth: 0
   },
   title: {
@@ -33,40 +23,40 @@ export default {
     }
   },
   xAxis: {
-    gridLineColor: "#333333",
+    gridLineColor: gridLineColor,
     gridLineWidth: 1,
     labels: {
       style: {
-        color: "#A0A0A0"
+        color: textColor
       }
     },
-    lineColor: "#A0A0A0",
-    tickColor: "#A0A0A0",
+    lineColor: gridLineColor,
+    tickColor: gridLineColor,
     title: {
       style: {
-        color: "#CCC",
+        color: textColor,
         fontWeight: "bold",
-        fontSize: "12px",
+        fontSize: "15px",
         fontFamily: "Trebuchet MS, Verdana, sans-serif"
       }
     }
   },
   yAxis: {
-    gridLineColor: "#333333",
+    gridLineColor: gridLineColor,
     labels: {
       style: {
-        color: "#A0A0A0"
+        color: textColor
       }
     },
-    lineColor: "#A0A0A0",
+    lineColor: gridLineColor,
     minorTickInterval: null,
-    tickColor: "#A0A0A0",
+    tickColor: gridLineColor,
     tickWidth: 1,
     title: {
       style: {
-        color: "#CCC",
+        color: textColor,
         fontWeight: "bold",
-        fontSize: "12px",
+        fontSize: "15px",
         fontFamily: "Trebuchet MS, Verdana, sans-serif"
       }
     }
@@ -108,7 +98,7 @@ export default {
   legend: {
     itemStyle: {
       font: "9pt Trebuchet MS, Verdana, sans-serif",
-      color: "#A0A0A0"
+      color: textColor
     },
     itemHoverStyle: {
       color: "#FFF"
@@ -122,7 +112,7 @@ export default {
   },
   labels: {
     style: {
-      color: "#CCC"
+      color: textColor
     }
   },
 

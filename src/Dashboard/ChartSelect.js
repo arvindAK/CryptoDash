@@ -1,12 +1,17 @@
 import styled from "styled-components";
-import { backgroundColor2, fontSize2 } from "../Shared/Styles";
+import { fontSize2, textColor } from "../Shared/Styles";
 
 export default styled.select`
-  ${backgroundColor2}
+  background: none
   ${fontSize2}
-  color: #1163c9;
-  border: 1px solid;
+  color: #fff;
+  border: none
   margin: 5px;
   height: 25px;
   float: right;
+  &:hover {
+    cursor: pointer;
+    color: ${textColor};
+    transition: 1s;
+  }
 `;

@@ -16,6 +16,7 @@ export const SelectableTile = styled(Tile)`
   &:hover {
     cursor: pointer;
     ${greenBoxShadow}
+    transition: .5s;
   }
 `;
 
@@ -23,6 +24,7 @@ export const DeletableTile = styled(SelectableTile)`
   &:hover {
     cursor: pointer;
     ${redBoxShadow}
+    transition: .5s;
   }
 `;
 
