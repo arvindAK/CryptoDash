@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/CryptoDash/static/js/runtime~main.dbe0dabc.js"
   },
   {
-    "revision": "fe28800164016434f840",
-    "url": "/CryptoDash/static/js/main.d650761d.chunk.js"
+    "revision": "7a345905074b712f43ca",
+    "url": "/CryptoDash/static/js/main.98d4f488.chunk.js"
   },
   {
     "revision": "35708ae86e3d2d46ee57",
     "url": "/CryptoDash/static/js/2.768236c5.chunk.js"
   },
   {
-    "revision": "fe28800164016434f840",
+    "revision": "7a345905074b712f43ca",
     "url": "/CryptoDash/static/css/main.1900d89a.chunk.css"
   },
   {
-    "revision": "689b94a1d9428e8eec196a333b3e26d9",
+    "revision": "f678b6abe4d2301e6436168828f0d7ad",
     "url": "/CryptoDash/index.html"
   }
 ];
