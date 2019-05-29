@@ -1,13 +1,13 @@
 {
-  "main.css": "/CryptoDash/static/css/main.1900d89a.chunk.css",
-  "main.js": "/CryptoDash/static/js/main.98d4f488.chunk.js",
-  "main.js.map": "/CryptoDash/static/js/main.98d4f488.chunk.js.map",
+  "main.css": "/CryptoDash/static/css/main.00319943.chunk.css",
+  "main.js": "/CryptoDash/static/js/main.a2dfa504.chunk.js",
+  "main.js.map": "/CryptoDash/static/js/main.a2dfa504.chunk.js.map",
   "runtime~main.js": "/CryptoDash/static/js/runtime~main.dbe0dabc.js",
   "runtime~main.js.map": "/CryptoDash/static/js/runtime~main.dbe0dabc.js.map",
   "static/js/2.768236c5.chunk.js": "/CryptoDash/static/js/2.768236c5.chunk.js",
   "static/js/2.768236c5.chunk.js.map": "/CryptoDash/static/js/2.768236c5.chunk.js.map",
   "index.html": "/CryptoDash/index.html",
-  "precache-manifest.b5e4d0a0f54f36376c94a09e3706ae2d.js": "/CryptoDash/precache-manifest.b5e4d0a0f54f36376c94a09e3706ae2d.js",
+  "precache-manifest.fc818817abc5244cdde1520c3a8db080.js": "/CryptoDash/precache-manifest.fc818817abc5244cdde1520c3a8db080.js",
   "service-worker.js": "/CryptoDash/service-worker.js",
-  "static/css/main.1900d89a.chunk.css.map": "/CryptoDash/static/css/main.1900d89a.chunk.css.map"
+  "static/css/main.00319943.chunk.css.map": "/CryptoDash/static/css/main.00319943.chunk.css.map"
 }
